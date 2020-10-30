@@ -92,12 +92,12 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: './src/assets/images/andt_logo.png'
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: './src/assets/images/andt_logo.png'
+    //   }
+    // },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
