@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    // `gatsby-plugin-sass`,
 
     {
       resolve: 'gatsby-source-filesystem',
@@ -29,12 +30,14 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
         path: `${__dirname}/src/images`,
+        name: 'images',
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -60,32 +63,58 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Space Mono`,
+    //         variants: [`400`, `700`]
+    //       },
+    //       {
+    //         family: `Ubuntu`,
+    //         variants: [`300`, `400`, `700`]
+    //       },
+    //     ],
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // The property ID; the tracking code won't be generated without it
+    //     trackingId: "UA-179169162-1",
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     head: false,
+    //     // Setting this parameter is also optional
+    //     respectDNT: true,
+    //     // Defers execution of google analytics script after page load
+    //     defer: false,
+    //   },
+    // },
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cache`,
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: './src/assets/images/andt_logo.png'
+    //   }
+    // },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
+    //     name: `ANDT`,
+    //     short_name: `ANDT`,
     //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+    //     background_color: `#009EE2`,
+    //     theme_color: `#009EE2`,
+    //     display: `standalone`,
+    //     icon: `src/assets/images/andt_logo.png`
     //   },
     // },
-    //added plugin
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      // options: {
-      //   Add any options here
-      // },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
+    // `gatsby-plugin-sitemap`,
+    // 'gatsby-plugin-robots-txt',
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cache`,
+    `gatsby-plugin-styled-components`
   ],
 }
