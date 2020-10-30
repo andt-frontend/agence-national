@@ -37,7 +37,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -92,12 +91,12 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-netlify-cms`,
-    // {
-    //   resolve: `gatsby-plugin-favicon`,
-    //   options: {
-    //     logo: './src/assets/images/andt_logo.png'
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/assets/images/andt_logo.png'
+      }
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

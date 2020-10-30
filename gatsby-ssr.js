@@ -11,7 +11,7 @@ import React from 'react'
 // import "./src/assets/stylesheets/layout.scss"
 
 import { ThemeProvider } from 'styled-components'
-import Theme from './src/theme/theme'
+import Theme from './src/assets/stylesheets/theme'
 
 export const wrapRootElement = ({ element }) => (
     <ThemeProvider theme={Theme}>
