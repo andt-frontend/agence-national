@@ -19,20 +19,20 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
-        name: 'img',
+        name: 'uploads',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data`,
-        name: 'data',
+        path: `${__dirname}/src/site-data`,
+        name: 'site-data',
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
         name: 'images',
       },
     },
@@ -45,7 +45,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
-              name: 'img',
+              name: 'uploads',
             },
           },
           {
@@ -92,12 +92,12 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-netlify-cms`,
-    // {
-    //   resolve: `gatsby-plugin-favicon`,
-    //   options: {
-    //     logo: './src/assets/images/andt_logo.png'
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/assets/images/andt_logo.png'
+      }
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
