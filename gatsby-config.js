@@ -19,7 +19,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
-        name: 'uploads',
+        name: 'img',
       },
     },
     {
@@ -45,7 +45,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
-              name: 'uploads',
+              name: 'img',
             },
           },
           {
